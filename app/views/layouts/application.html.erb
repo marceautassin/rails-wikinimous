@@ -5,11 +5,16 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <div class="d-flex justify-content-between align-items-center bg-light p-2 rounded-bottom border">
+      <h2><%= link_to 'Wikinimous', root_path, { class: "text-dark text-decoration-none" } %></h2>
+      <%= link_to 'New Article', new_article_path, { class: "btn btn-primary" } %>
+    </div>
     <%= yield %>
   </body>
 </html>

@@ -1,0 +1,12 @@
+<div class="container mt-5">
+  <div class="card bg-light my-2 mx-2 p-5">
+    <div class="d-flex justify-content-between">
+      <h2><%= @article.title %></h2>
+      <div>
+        <i> <%= link_to "🖊️", edit_article_path(@article)%> </i>
+        <i> <%= link_to "🗑️", article_path(@article), method: :delete, data: { confirm: "Are you sure?" } %> </i>
+      </div>
+    </div>
+    <p><%= @article.content %></p>
+  </div>
+</div>
